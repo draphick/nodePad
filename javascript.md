@@ -21,3 +21,25 @@ $(document).keypress(function(e){
     }
 })
 ```
+
+## Moment
+
+Formatting time
+
+### HTML 
+
+``` html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+```
+
+### In JS
+
+``` js
+const timestamp = new Date().getTime()
+// 24h clock
+moment(timestamp).format('hh:mm')
+// "Today is Sunday"
+moment(timestamp).format("[Today is] dddd")
+// "Sunday, February 14th 2010, 3:25:50 pm"
+moment(timestamp).format("dddd, MMMM Do YYYY, h:mm:ss a")
+```
